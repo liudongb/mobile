@@ -1,0 +1,75 @@
+
+@import './vant';
+@import 'vant/lib/style/mixins/hairline';
+@import './variable';
+
+
+
+.uploader__upload {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #fbfbfb;
+
+  width: @uploader-size;
+  height: @uploader-size;
+  border-radius: 5px;
+
+  &-icon {
+    font-size: 26px;
+    color: #cfcfcf;
+  }
+
+}
+.uploader-list {
+  padding: 6px @padding-sm;
+  &-title {
+    padding-left: @padding-sm;
+    font-size: 17px;
+    color: @gray-8;
+    line-height: 35px;
+    display: flex;
+
+    &__value {
+      flex: 1;
+    }
+
+    &__label {
+      font-size: 16px;
+    }
+  }
+  &-item {
+    position: relative;
+    padding: 8px 0;
+    display: flex;
+
+    &::after {
+      .hairline-bottom(@cell-border-color);
+    }
+
+    &__title {
+      font-size: 14px;
+      color: @gray-8;
+    }
+    &__content {
+      flex: 1;
+      font-size: 14px;
+      color: @gray-6;
+    }
+    &__label {
+    }
+
+    &__icon {
+      margin-right: 5px;
+    }
+
+    &__actions{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import './variable.less';
+
+.z-swipe-group{
+  width: 100%;
+  color: #fff;
+  font-size: 15px;
+  display: flex;
+  height: 100%;
+}
+
+.z-swipe-item{
+  width: 72px;
+  height: 100%;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--edit {
+    background-color: @text-blue;
+  }
+
+  &--del  {
+    background-color: #f44;
+  }
+}
